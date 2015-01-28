@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HS cloud</title>
+</head>
+<body>
+<a href="/register" style="float:right">Register Account</a>
+
+<center><h1>High Secure Cloud </h1></center>
+{% if user.is_authenticated %}
+<a href="/dashboard" > Dashboard </a>
+
+<a href="/logout" style="float:right">Logout</a>
+<h1>hello {{ user.username }}!</h1>
+
+{% else %}
+<a href="/login" style="float:right;" >Login</a>
+{% endif %}
+
+</body>
+</html>
